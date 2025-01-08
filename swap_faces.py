@@ -88,8 +88,8 @@ def draw_delaunay(image, landmarks):
 
 # Il ne faut pas prendre une image en portait et une en paysage, sinon le resize va tout casser et
 # le model sera incapable de reperer un visage
-source = cv2.imread("./image/ewen.jpg")
-destination = cv2.imread("./image/noan.jpg")
+source = cv2.imread("./image/1.jpeg")
+destination = cv2.imread("./image/2.jpeg")
 
 source = cv2.resize(source, (destination.shape[1], destination.shape[0]))
 
