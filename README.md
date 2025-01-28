@@ -57,6 +57,3 @@ python swap_faces.py "./image/1.jpeg" "./image/2.jpeg" True
 
 le troisième paramètre correspond au debug. Indiquez True ou False
 
-### 3. **Résultat**
-
-Le script générera une image contenant les visages inversés, sauvegardée à l'emplacement spécifié avec l'option `--output`.
