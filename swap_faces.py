@@ -7,7 +7,14 @@ from imutils import face_utils
 import sys
 import math
 
-DEBUG = False
+# Il ne faut pas prendre une image en portait et une en paysage, sinon le resize va tout casser et
+# le model sera incapable de reperer un visage
+#source = cv2.imread("./image/1.jpeg")
+#destination = cv2.imread("./image/2.jpeg")
+
+source = cv2.imread(sys.argv[1])
+destination = cv2.imread(sys.argv[2])
+DEBUG = sys.argv[3]
 
 detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
@@ -85,11 +92,6 @@ def draw_delaunay(image, landmarks):
 
     return image
 
-
-# Il ne faut pas prendre une image en portait et une en paysage, sinon le resize va tout casser et
-# le model sera incapable de reperer un visage
-source = cv2.imread("./image/1.jpeg")
-destination = cv2.imread("./image/2.jpeg")
 
 source = cv2.resize(source, (destination.shape[1], destination.shape[0]))
 
